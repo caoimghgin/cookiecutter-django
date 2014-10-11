@@ -35,4 +35,9 @@ django-avatar==2.0
 # Time zones support
 pytz==2014.7
 
+# Django REST framework
+PyJWT==0.2.1
+djangorestframework==2.4.3
+djangorestframework-jwt==1.0.1
+
 # Your custom requirements go here

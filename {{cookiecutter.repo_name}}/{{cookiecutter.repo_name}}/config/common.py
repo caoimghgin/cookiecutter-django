@@ -42,11 +42,13 @@ class Common(Configuration):
         'allauth',  # registration
         'allauth.account',  # registration
         'allauth.socialaccount',  # registration
+        'rest_framework', # Django REST framework
     )
 
     # Apps specific for this project go here.
     LOCAL_APPS = (
         'users',  # custom users app
+        'api', 
         # Your stuff: custom apps go here
     )
 
@@ -266,3 +268,16 @@ class Common(Configuration):
     # END LOGGING CONFIGURATION
 
     # Your common stuff: Below this line define 3rd party library settings
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+    ),    
+}
