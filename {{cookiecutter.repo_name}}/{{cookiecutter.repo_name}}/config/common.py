@@ -22,12 +22,18 @@ class Common(Configuration):
 
     # APP CONFIGURATION
     DJANGO_APPS = (
+        # Default Django apps:
         'django.contrib.auth',
         'django.contrib.contenttypes',
         'django.contrib.sessions',
         'django.contrib.sites',
         'django.contrib.messages',
         'django.contrib.staticfiles',
+
+        # Useful template tags:
+        # 'django.contrib.humanize',
+
+        # Admin
         'django.contrib.admin',
     )
     THIRD_PARTY_APPS = (
@@ -41,6 +47,8 @@ class Common(Configuration):
 
     # Apps specific for this project go here.
     LOCAL_APPS = (
+        'users',  # custom users app
+        'api', 
         # Your stuff: custom apps go here
     )
 
@@ -122,7 +130,7 @@ class Common(Configuration):
 
     # GENERAL CONFIGURATION
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#time-zone
-    TIME_ZONE = 'America/New_York'
+    TIME_ZONE = 'America/Los_Angeles'
 
     # See: https://docs.djangoproject.com/en/dev/ref/settings/#language-code
     LANGUAGE_CODE = 'en-us'
