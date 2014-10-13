@@ -1,6 +1,9 @@
 # Bleeding edge Django
 django==1.7
 
+# Web server
+gunicorn==19.1.1
+
 # Configuration
 django-configurations==0.8
 django-secure==1.0
